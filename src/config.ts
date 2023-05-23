@@ -14,6 +14,6 @@ export class Config {
     }
 
     get trackedTopEarningsLimit(): number {
-        return parseInt(process.env.TRACKED_EARNINGS_NUMBER ?? '', 10) || 1;
+        return parseInt(process.env.TRACKED_EARNINGS_NUMBER ?? '', 10) || 10;
     }
 }

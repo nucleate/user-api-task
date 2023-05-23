@@ -41,7 +41,7 @@ export class UserService {
     async getAllDistinctCountries(): Promise<Array<NumberOfUsersByCountry>> {
         await this.fullfillCountriesStorageIfEmpty();
 
-        const countriesWithUsers: Array<any> = [];
+        const countriesWithUsers: Array<NumberOfUsersByCountry> = [];
         for (const [
             country,
             countryDetails,
@@ -49,7 +49,6 @@ export class UserService {
             countriesWithUsers.push({
                 country,
                 usersNumber: countryDetails.usersNumber,
-                earning: countryDetails.trackedHighestEarnings,
             });
         }
 
